@@ -6,26 +6,26 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
 
-const products = [
+const billsBreakdown = [
   {
-    name: 'Professional plan',
+    name: 'Total Amount',
+    desc: 'Due this month',
+    price: '$306.10',
+  },
+  {
+    name: 'Bill Amount',
     desc: 'Monthly subscription',
-    price: '$15.00',
+    price: '$150.00',
   },
   {
-    name: 'Dedicated support',
-    desc: 'Included in the Professional plan',
-    price: 'Free',
+    name: "Last month's balance",
+    desc: 'Late monthly subscription',
+    price: '$151.61',
   },
   {
-    name: 'Hardware',
-    desc: 'Devices needed for development',
-    price: '$69.99',
-  },
-  {
-    name: 'Landing page template',
-    desc: 'License',
-    price: '$49.99',
+    name: 'Service Fee',
+    desc: 'Payment charges',
+    price: '$4.49',
   },
 ];
 
@@ -33,13 +33,13 @@ function Info({ totalPrice }) {
   return (
     <React.Fragment>
       <Typography variant="subtitle2" color="text.secondary">
-        Total
+        Amount Due
       </Typography>
       <Typography variant="h4" gutterBottom>
         {totalPrice}
       </Typography>
       <List disablePadding>
-        {products.map((product) => (
+        {billsBreakdown.map((product) => (
           <ListItem key={product.name} sx={{ py: 1, px: 0 }}>
             <ListItemText
               sx={{ mr: 2 }}
