@@ -12,7 +12,6 @@ import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Stepper from '@mui/material/Stepper';
 import ToggleButton from '@mui/material/ToggleButton';
-import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import Typography from '@mui/material/Typography';
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -40,26 +39,7 @@ function ToggleCustomTheme({ showCustomTheme, toggleCustomTheme }) {
         width: '100dvw',
         position: 'fixed',
         bottom: 24,
-      }}>
-      <ToggleButtonGroup
-        color="primary"
-        exclusive
-        value={showCustomTheme}
-        onChange={toggleCustomTheme}
-        aria-label="Platform"
-        sx={{
-          backgroundColor: 'background.default',
-          '& .Mui-selected': {
-            pointerEvents: 'none',
-          },
-        }}>
-        <ToggleButton value>
-          <AutoAwesomeRoundedIcon sx={{ fontSize: '20px', mr: 1 }} />
-          Custom theme
-        </ToggleButton>
-        <ToggleButton value={false}>Material Design 2</ToggleButton>
-      </ToggleButtonGroup>
-    </Box>
+      }}></Box>
   );
 }
 
@@ -149,10 +129,10 @@ export default function Checkout() {
               Back to
               <img
                 src={
-                  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73568658154dae_SitemarkDefault.svg'
+                  'https://www.paymentus.com/assets/images/paymentus-logo.svg'
                 }
                 style={logoStyle}
-                alt="Sitemark's logo"
+                alt="Paymentus logo"
               />
             </Button>
           </Box>
