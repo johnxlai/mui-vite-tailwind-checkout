@@ -124,7 +124,7 @@ export default function Checkout() {
             <Button
               startIcon={<ArrowBackRoundedIcon />}
               component="a"
-              href="/material-ui/getting-started/templates/landing-page/"
+              href="https://www.paymentus.com/"
               sx={{ ml: '-8px' }}>
               Back to
               <img
@@ -181,12 +181,12 @@ export default function Checkout() {
               <Button
                 startIcon={<ArrowBackRoundedIcon />}
                 component="a"
-                href="/material-ui/getting-started/templates/landing-page/"
+                href=""
                 sx={{ alignSelf: 'start' }}>
                 Back to
                 <img
                   src={
-                    'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73568658154dae_SitemarkDefault.svg'
+                    'https://www.paymentus.com/assets/images/paymentus-logo.svg'
                   }
                   style={logoStyle}
                   alt="Sitemark's logo"
