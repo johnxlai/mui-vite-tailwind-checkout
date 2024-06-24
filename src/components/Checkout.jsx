@@ -59,14 +59,6 @@ const logoStyle = {
   marginRight: '-8px',
 };
 
-const logoStyleInvert = {
-  width: '140px',
-  height: '56px',
-  marginLeft: '-4px',
-  marginRight: '-8px',
-  filter: 'invert(1)',
-};
-
 function getStepContent(step) {
   switch (step) {
     case 0:
@@ -131,8 +123,9 @@ export default function Checkout() {
             }}>
             <img
               src={'https://www.paymentus.com/assets/images/paymentus-logo.svg'}
-              style={mode === 'dark' ? logoStyle : logoStyleInvert}
+              style={logoStyle}
               alt="Paymentus logo"
+              className={mode === 'light' ? 'invert' : ''}
             />
           </Box>
           <Box
@@ -182,7 +175,8 @@ export default function Checkout() {
                   'https://www.paymentus.com/assets/images/paymentus-logo.svg'
                 }
                 style={logoStyle}
-                alt="Paymentus Logo"
+                alt="Paymentus logo"
+                className={mode === 'light' ? 'invert' : ''}
               />
               <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
             </Box>
