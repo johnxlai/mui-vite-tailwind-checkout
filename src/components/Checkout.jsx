@@ -50,7 +50,7 @@ ToggleCustomTheme.propTypes = {
   toggleCustomTheme: PropTypes.func.isRequired,
 };
 
-const steps = ['Shipping address', 'Payment details', 'Review your order'];
+const steps = ['Billing address', 'Payment Method', 'Review & Confirm'];
 
 const logoStyle = {
   width: '140px',
@@ -284,11 +284,14 @@ export default function Checkout() {
             {activeStep === steps.length ? (
               <Stack spacing={2} useFlexGap>
                 <Typography variant="h1">📦</Typography>
-                <Typography variant="h5">Thank you for your order!</Typography>
+                <Typography variant="h5">Payment Successful!</Typography>
                 <Typography variant="body1" color="text.secondary">
-                  Your order number is
-                  <strong>&nbsp;#140396</strong>. We have emailed your order
-                  confirmation and will update you once its shipped.
+                  A confirmation email has been sent to your email address.
+                </Typography>
+                <Typography variant="body1" color="text.secondary">
+                  <small>
+                    <strong>&nbsp;Transaction ID: #140396</strong>
+                  </small>
                 </Typography>
                 <Button
                   variant="contained"
@@ -296,7 +299,7 @@ export default function Checkout() {
                     alignSelf: 'start',
                     width: { xs: '100%', sm: 'auto' },
                   }}>
-                  Go to my orders
+                  Go to Dashboard
                 </Button>
               </Stack>
             ) : (
