@@ -100,7 +100,11 @@ const getDesignTokens = (mode) => ({
       light: red[50],
       main: red[500],
       dark: red[700],
-      ...(mode === 'dark' && { light: '#D32F2F', main: '#D32F2F', dark: '#B22A2A' }),
+      ...(mode === 'dark' && {
+        light: '#D32F2F',
+        main: '#D32F2F',
+        dark: '#B22A2A',
+      }),
     },
     success: {
       light: green[300],
@@ -280,7 +284,7 @@ export default function getCheckoutTheme(mode) {
                 backgroundImage: `linear-gradient(to bottom, ${brand[400]}, ${brand[500]})`,
                 boxShadow: `inset 0 1px ${alpha(
                   brand[300],
-                  0.5,
+                  0.5
                 )}, inset 0 -2px ${alpha(brand[700], 0.5)}`,
                 border: `1px solid ${brand[500]}`,
                 '&:hover': {
@@ -360,7 +364,7 @@ export default function getCheckoutTheme(mode) {
                 boxSizing: 'border-box',
                 background: `linear-gradient(to bottom, ${gray[900]}, ${alpha(
                   gray[800],
-                  0.5,
+                  0.5
                 )})`,
                 '&:hover': {
                   borderColor: brand[700],
@@ -503,9 +507,10 @@ export default function getCheckoutTheme(mode) {
             },
             ...(ownerState.variant === 'standard' && {
               '&.MuiTextField-root': {
-                '& .MuiInput-root:hover:not(.Mui-disabled, .Mui-error):before': {
-                  borderColor: brand[200],
-                },
+                '& .MuiInput-root:hover:not(.Mui-disabled, .Mui-error):before':
+                  {
+                    borderColor: brand[200],
+                  },
               },
               '& :before': {
                 borderBottom: '1px solid',
@@ -547,9 +552,10 @@ export default function getCheckoutTheme(mode) {
               },
               ...(ownerState.variant === 'standard' && {
                 '&.MuiTextField-root': {
-                  '& .MuiInput-root:hover:not(.Mui-disabled, .Mui-error):before': {
-                    borderColor: brand[200],
-                  },
+                  '& .MuiInput-root:hover:not(.Mui-disabled, .Mui-error):before':
+                    {
+                      borderColor: brand[200],
+                    },
                 },
                 '& :before': {
                   borderBottom: '1px solid',
