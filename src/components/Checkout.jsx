@@ -121,12 +121,19 @@ export default function Checkout() {
               alignItems: 'end',
               height: 150,
             }}>
-            <img
-              src={'https://www.paymentus.com/assets/images/paymentus-logo.svg'}
-              style={logoStyle}
-              alt="Paymentus logo"
-              className={mode === 'light' ? 'invert' : ''}
-            />
+            <Button
+              component="a"
+              href="https://www.paymentus.com/"
+              sx={{ ml: '-8px' }}>
+              <img
+                src={
+                  'https://www.paymentus.com/assets/images/paymentus-logo.svg'
+                }
+                style={logoStyle}
+                alt="Paymentus logo"
+                className={mode === 'light' ? 'invert' : ''}
+              />
+            </Button>
           </Box>
           <Box
             sx={{
@@ -170,14 +177,20 @@ export default function Checkout() {
                 width: '100%',
                 justifyContent: 'space-between',
               }}>
-              <img
-                src={
-                  'https://www.paymentus.com/assets/images/paymentus-logo.svg'
-                }
-                style={logoStyle}
-                alt="Paymentus logo"
-                className={mode === 'light' ? 'invert' : ''}
-              />
+              <Button
+                component="a"
+                href="https://www.paymentus.com/"
+                sx={{ ml: '-8px' }}>
+                <img
+                  src={
+                    'https://www.paymentus.com/assets/images/paymentus-logo.svg'
+                  }
+                  style={logoStyle}
+                  alt="Paymentus logo"
+                  className={mode === 'light' ? 'invert' : ''}
+                />
+              </Button>
+
               <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
             </Box>
             <Box
