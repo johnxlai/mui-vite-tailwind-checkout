@@ -1,11 +1,12 @@
 import * as React from 'react';
 import SignIn from './components/SignIn';
+import Checkout from './components/Checkout';
 
 export default function App() {
   return (
     <>
-      <h1>TESt</h1>
-      <SignIn />
+      {/* <SignIn /> */}
+      <Checkout />
     </>
   );
 }
