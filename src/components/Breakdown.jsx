@@ -29,7 +29,7 @@ const billsBreakdown = [
   },
 ];
 
-function Info({ totalPrice }) {
+function Breakdown({ totalPrice }) {
   return (
     <React.Fragment>
       <Typography variant="subtitle2" color="text.secondary">
@@ -56,8 +56,8 @@ function Info({ totalPrice }) {
   );
 }
 
-Info.propTypes = {
+Breakdown.propTypes = {
   totalPrice: PropTypes.string.isRequired,
 };
 
-export default Info;
+export default Breakdown;
