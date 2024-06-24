@@ -59,6 +59,14 @@ const logoStyle = {
   marginRight: '-8px',
 };
 
+const logoStyleInvert = {
+  width: '140px',
+  height: '56px',
+  marginLeft: '-4px',
+  marginRight: '-8px',
+  filter: 'invert(1)',
+};
+
 function getStepContent(step) {
   switch (step) {
     case 0:
@@ -121,20 +129,11 @@ export default function Checkout() {
               alignItems: 'end',
               height: 150,
             }}>
-            <Button
-              startIcon={<ArrowBackRoundedIcon />}
-              component="a"
-              href="https://www.paymentus.com/"
-              sx={{ ml: '-8px' }}>
-              Back to
-              <img
-                src={
-                  'https://www.paymentus.com/assets/images/paymentus-logo.svg'
-                }
-                style={logoStyle}
-                alt="Paymentus logo"
-              />
-            </Button>
+            <img
+              src={'https://www.paymentus.com/assets/images/paymentus-logo.svg'}
+              style={mode === 'dark' ? logoStyle : logoStyleInvert}
+              alt="Paymentus logo"
+            />
           </Box>
           <Box
             sx={{
@@ -178,20 +177,13 @@ export default function Checkout() {
                 width: '100%',
                 justifyContent: 'space-between',
               }}>
-              <Button
-                startIcon={<ArrowBackRoundedIcon />}
-                component="a"
-                href=""
-                sx={{ alignSelf: 'start' }}>
-                Back to
-                <img
-                  src={
-                    'https://www.paymentus.com/assets/images/paymentus-logo.svg'
-                  }
-                  style={logoStyle}
-                  alt="Sitemark's logo"
-                />
-              </Button>
+              <img
+                src={
+                  'https://www.paymentus.com/assets/images/paymentus-logo.svg'
+                }
+                style={logoStyle}
+                alt="Paymentus Logo"
+              />
               <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
             </Box>
             <Box
