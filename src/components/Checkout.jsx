@@ -233,19 +233,19 @@ export default function Checkout() {
               }}>
               <div>
                 <Typography variant="subtitle2" gutterBottom>
-                  Selected products
+                  Bill Amount
                 </Typography>
                 <Typography variant="body1">
                   {activeStep >= 2
-                    ? parseInt(billsBreakdown[0].price) * 1.13
-                    : billsBreakdown[0].price}
+                    ? `$${parseInt(billsBreakdown[0].price) * 1.13}`
+                    : `$${billsBreakdown[0].price}`}
                 </Typography>
               </div>
               <InfoMobile
                 totalPrice={
                   activeStep >= 2
-                    ? parseInt(billsBreakdown[0].price) * 1.13
-                    : billsBreakdown[0].price
+                    ? `$${parseInt(billsBreakdown[0].price) * 1.13}`
+                    : `$${billsBreakdown[0].price}`
                 }
               />
             </CardContent>
