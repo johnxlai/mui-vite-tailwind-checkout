@@ -1,4 +1,4 @@
-# Mui Vite Tailwind Payment Form
+# Paymentus Bill Payment Form - MUI, Vite, and Tailwind
 
 [Base UI](https://mui.com/base-ui/) is a library of unstyled React UI components and hooks.
 
