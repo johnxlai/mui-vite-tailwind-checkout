@@ -135,8 +135,8 @@ export default function Checkout() {
             <Info
               totalPrice={
                 activeStep >= 2
-                  ? parseInt(billsBreakdown[0].price) * 1.13
-                  : billsBreakdown[0].price
+                  ? `$${parseInt(billsBreakdown[0].price) * 1.13}`
+                  : `$${billsBreakdown[0].price}`
               }
             />
           </Box>

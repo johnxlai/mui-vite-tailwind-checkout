@@ -43,7 +43,7 @@ export default function Review() {
         sx={{ my: 2 }}>
         <div>
           <Typography variant="subtitle2" gutterBottom>
-            Shipment details
+            Billing Information
           </Typography>
           <Typography gutterBottom>John Smith</Typography>
           <Typography color="text.secondary" gutterBottom>

@@ -219,7 +219,7 @@ export default function PaymentForm() {
             gap: 2,
           }}>
           <Alert severity="warning" icon={<WarningRoundedIcon />}>
-            Your order will be processed once we receive the funds.
+            Your account balance will be updated once we receive the funds.
           </Alert>
           <Typography variant="subtitle1" fontWeight="medium">
             Bank account
