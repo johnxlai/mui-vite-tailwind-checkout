@@ -9,9 +9,9 @@ export const brand = {
   400: '#0A66C2',
   500: '#0959AA',
   600: '#064079',
-  700: '#033363',
-  800: '#02294F',
-  900: '#021F3B',
+  700: '#021849',
+  800: '#00133D',
+  900: '#001030',
 };
 
 export const secondary = {
@@ -22,7 +22,7 @@ export const secondary = {
   400: '#750AC2',
   500: '#6709AA',
   600: '#490679',
-  700: '#3B0363',
+  700: '#AA206D',
   800: '#2F024F',
   900: '#23023B',
 };
@@ -49,7 +49,7 @@ export const green = {
   500: '#1F7A1F',
   600: '#136C13',
   700: '#0A470A',
-  800: '#042F04',
+  800: '#00133D',
   900: '#021D02',
 };
 
@@ -131,8 +131,8 @@ const getDesignTokens = (mode) => ({
     divider: mode === 'dark' ? alpha(gray[600], 0.3) : alpha(gray[300], 0.5),
     background: {
       default: '#fff',
-      paper: gray[50],
-      ...(mode === 'dark' && { default: gray[900], paper: gray[800] }),
+      paper: brand[50],
+      ...(mode === 'dark' && { default: brand[900], paper: brand[800] }),
     },
     text: {
       primary: gray[800],
@@ -441,7 +441,7 @@ export default function getCheckoutTheme(mode) {
               border: '1px solid',
               borderColor: gray[700],
               boxShadow: '0px 2px 2px rgb(0, 0, 0)',
-              backgroundColor: alpha(gray[800], 0.4),
+              backgroundColor: alpha(brand[700], 0.4),
               transition: 'border-color 120ms ease-in',
               '&:hover': {
                 borderColor: brand[300],
