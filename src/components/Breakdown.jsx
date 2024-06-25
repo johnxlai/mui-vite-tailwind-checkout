@@ -36,7 +36,7 @@ function Breakdown({ totalPrice }) {
         Amount Due
       </Typography>
       <Typography variant="h4" gutterBottom>
-        {totalPrice}
+        ${totalPrice}
       </Typography>
       <List disablePadding>
         {billsBreakdown.map((product) => (

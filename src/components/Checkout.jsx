@@ -31,6 +31,14 @@ import ToggleColorMode from './ToggleColorMode';
 
 const steps = ['Billing address', 'Payment Method', 'Review & Confirm'];
 
+const billsBreakdown = [
+  {
+    name: 'Total Amount',
+    desc: 'Due this month',
+    price: '306.10',
+  },
+];
+
 const logoStyle = {
   width: '140px',
   height: '56px',
@@ -124,7 +132,13 @@ export default function Checkout() {
               width: '100%',
               maxWidth: 500,
             }}>
-            <Info totalPrice={activeStep >= 2 ? '$144.97' : '$134.98'} />
+            <Info
+              totalPrice={
+                activeStep >= 2
+                  ? parseInt(billsBreakdown[0].price) * 1.13
+                  : billsBreakdown[0].price
+              }
+            />
           </Box>
         </Grid>
         <Grid
@@ -222,11 +236,17 @@ export default function Checkout() {
                   Selected products
                 </Typography>
                 <Typography variant="body1">
-                  {activeStep >= 2 ? '$144.97' : '$134.98'}
+                  {activeStep >= 2
+                    ? parseInt(billsBreakdown[0].price) * 1.13
+                    : billsBreakdown[0].price}
                 </Typography>
               </div>
               <InfoMobile
-                totalPrice={activeStep >= 2 ? '$144.97' : '$134.98'}
+                totalPrice={
+                  activeStep >= 2
+                    ? parseInt(billsBreakdown[0].price) * 1.13
+                    : billsBreakdown[0].price
+                }
               />
             </CardContent>
           </Card>
@@ -331,7 +351,7 @@ export default function Checkout() {
                     sx={{
                       width: { xs: '100%', sm: 'fit-content' },
                     }}>
-                    {activeStep === steps.length - 1 ? 'Place order' : 'Next'}
+                    {activeStep === steps.length - 1 ? 'Pay Bill' : 'Next'}
                   </Button>
                 </Box>
               </React.Fragment>
