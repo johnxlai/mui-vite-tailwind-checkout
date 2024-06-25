@@ -5,7 +5,7 @@ export const brand = {
   50: '#F0F7FF',
   100: '#CEE5FD',
   200: '#9CCCFC',
-  300: '#55A6F6',
+  300: '#2364F6',
   400: '#0A66C2',
   500: '#0959AA',
   600: '#064079',
@@ -314,7 +314,7 @@ export default function getCheckoutTheme(mode) {
                 ownerState.color === 'primary' && {
                   border: `1px solid ${brand[600]}`,
                   backgroundImage: 'none',
-                  backgroundColor: brand[500],
+                  backgroundColor: brand[300],
                   '&:hover': {
                     background: brand[600],
                     backgroundImage: 'none',
