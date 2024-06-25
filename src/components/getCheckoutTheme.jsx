@@ -316,9 +316,11 @@ export default function getCheckoutTheme(mode) {
                   backgroundImage: 'none',
                   backgroundColor: brand[300],
                   '&:hover': {
-                    background: brand[600],
-                    backgroundImage: 'none',
+                    background: brand[300],
+                    backgroundImage:
+                      'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 50%)',
                     boxShadow: `0 0 0 1px  ${alpha(brand[700], 0.5)}`,
+                    transform: `translateY(2px)`,
                   },
                 }),
               ...(ownerState.variant === 'outlined' && {
