@@ -29,27 +29,6 @@ import PaymentForm from './PaymentForm';
 import Review from './Review';
 import ToggleColorMode from './ToggleColorMode';
 
-function ToggleCustomTheme({ showCustomTheme, toggleCustomTheme }) {
-  return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        width: '100dvw',
-        position: 'fixed',
-        bottom: 24,
-      }}></Box>
-  );
-}
-
-ToggleCustomTheme.propTypes = {
-  showCustomTheme: PropTypes.shape({
-    valueOf: PropTypes.func.isRequired,
-  }).isRequired,
-  toggleCustomTheme: PropTypes.func.isRequired,
-};
-
 const steps = ['Billing address', 'Payment Method', 'Review & Confirm'];
 
 const logoStyle = {
@@ -358,10 +337,6 @@ export default function Checkout() {
           </Box>
         </Grid>
       </Grid>
-      <ToggleCustomTheme
-        toggleCustomTheme={toggleCustomTheme}
-        showCustomTheme={showCustomTheme}
-      />
     </ThemeProvider>
   );
 }
