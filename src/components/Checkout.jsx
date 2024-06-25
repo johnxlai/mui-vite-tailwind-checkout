@@ -295,6 +295,7 @@ export default function Checkout() {
                   </small>
                 </Typography>
                 <Button
+                  href="/"
                   variant="contained"
                   sx={{
                     alignSelf: 'start',

@@ -8,7 +8,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
-const addresses = ['1 MUI Drive', 'Reactville', 'Anytown', '99999', 'USA'];
+const addresses = ['1 MUI Drive', 'Reactville', 'Ontario', 'LH4 4H4', 'Canada'];
 const payments = [
   { name: 'Card type:', detail: 'Visa' },
   { name: 'Card holder:', detail: 'Mr. John Smith' },
@@ -21,17 +21,17 @@ export default function Review() {
     <Stack spacing={2}>
       <List disablePadding>
         <ListItem sx={{ py: 1, px: 0 }}>
-          <ListItemText primary="Products" secondary="4 selected" />
-          <Typography variant="body2">$134.98</Typography>
+          <ListItemText primary="Total Amount" secondary="4 selected" />
+          <Typography variant="body2">$306.10</Typography>
         </ListItem>
         <ListItem sx={{ py: 1, px: 0 }}>
-          <ListItemText primary="Shipping" secondary="Plus taxes" />
-          <Typography variant="body2">$9.99</Typography>
+          <ListItemText primary="Taxes" secondary="HST" />
+          <Typography variant="body2">$39.68</Typography>
         </ListItem>
         <ListItem sx={{ py: 1, px: 0 }}>
           <ListItemText primary="Total" />
           <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>
-            $144.97
+            $345.78
           </Typography>
         </ListItem>
       </List>
