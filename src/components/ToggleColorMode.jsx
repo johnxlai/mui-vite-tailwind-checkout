@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import IconButton from '@mui/material/IconButton';
 
-import ModeNightRoundedIcon from '@mui/icons-material/ModeNightRounded';
+import DarkModeRoundedIcon from '@mui/icons-material/DarkModeRounded';
 import WbSunnyRoundedIcon from '@mui/icons-material/WbSunnyRounded';
 
 function ToggleColorMode({ mode, toggleColorMode }) {
@@ -15,7 +15,7 @@ function ToggleColorMode({ mode, toggleColorMode }) {
       {mode === 'dark' ? (
         <WbSunnyRoundedIcon fontSize="small" />
       ) : (
-        <ModeNightRoundedIcon fontSize="small" />
+        <DarkModeRoundedIcon fontSize="small" />
       )}
     </IconButton>
   );

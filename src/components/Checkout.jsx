@@ -74,6 +74,8 @@ export default function Checkout() {
     setActiveStep(activeStep - 1);
   };
 
+  const randomNum = () => Math.floor(Math.random() * 1000000);
+
   return (
     <ThemeProvider theme={showCustomTheme ? checkoutTheme : defaultTheme}>
       <CssBaseline />
@@ -262,14 +264,14 @@ export default function Checkout() {
             </Stepper>
             {activeStep === steps.length ? (
               <Stack spacing={2} useFlexGap>
-                <Typography variant="h1">📦</Typography>
+                <Typography variant="h1">🏦</Typography>
                 <Typography variant="h5">Payment Successful!</Typography>
                 <Typography variant="body1" color="text.secondary">
                   A confirmation email has been sent to your email address.
                 </Typography>
                 <Typography variant="body1" color="text.secondary">
                   <small>
-                    <strong>&nbsp;Transaction ID: #140396</strong>
+                    <strong>&nbsp;Transaction ID: #{randomNum()}</strong>
                   </small>
                 </Typography>
                 <Button

@@ -73,33 +73,33 @@ export default function AddressForm() {
           id="city"
           name="city"
           type="city"
-          placeholder="New York"
+          placeholder="Toronto"
           autoComplete="City"
           required
         />
       </FormGrid>
       <FormGrid item xs={6}>
-        <FormLabel htmlFor="state" required>
-          State
+        <FormLabel htmlFor="province" required>
+          Province
         </FormLabel>
         <OutlinedInput
-          id="state"
-          name="state"
-          type="state"
-          placeholder="NY"
-          autoComplete="State"
+          id="province"
+          name="province"
+          type="province"
+          placeholder="Ontario"
+          autoComplete="province"
           required
         />
       </FormGrid>
       <FormGrid item xs={6}>
-        <FormLabel htmlFor="zip" required>
-          Zip / Postal code
+        <FormLabel htmlFor="postalCode" required>
+          Postal code
         </FormLabel>
         <OutlinedInput
-          id="zip"
-          name="zip"
-          type="zip"
-          placeholder="12345"
+          id="postalCode"
+          name="postalCode"
+          type="postalCode"
+          placeholder="L6H 6H6"
           autoComplete="shipping postal-code"
           required
         />
@@ -112,7 +112,7 @@ export default function AddressForm() {
           id="country"
           name="country"
           type="country"
-          placeholder="United States"
+          placeholder="Canada"
           autoComplete="shipping country"
           required
         />
