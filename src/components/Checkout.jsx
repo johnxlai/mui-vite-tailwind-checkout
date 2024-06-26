@@ -1,5 +1,4 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -11,13 +10,10 @@ import Stack from '@mui/material/Stack';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Stepper from '@mui/material/Stepper';
-import ToggleButton from '@mui/material/ToggleButton';
 import Typography from '@mui/material/Typography';
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
-import AutoAwesomeRoundedIcon from '@mui/icons-material/AutoAwesomeRounded';
 import ChevronLeftRoundedIcon from '@mui/icons-material/ChevronLeftRounded';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 
@@ -28,16 +24,10 @@ import InfoMobile from './InfoMobile';
 import PaymentForm from './PaymentForm';
 import Review from './Review';
 import ToggleColorMode from './ToggleColorMode';
+import { billsBreakdown } from '../data/billsBreakdown';
+import { addTax } from '../utils/helpers';
 
 const steps = ['Billing address', 'Payment Method', 'Review & Confirm'];
-
-const billsBreakdown = [
-  {
-    name: 'Total Amount',
-    desc: 'Due this month',
-    price: '306.10',
-  },
-];
 
 const logoStyle = {
   width: '140px',
@@ -135,8 +125,8 @@ export default function Checkout() {
             <Info
               totalPrice={
                 activeStep >= 2
-                  ? `$${parseInt(billsBreakdown[0].price) * 1.13}`
-                  : `$${billsBreakdown[0].price}`
+                  ? `$${addTax(billsBreakdown[0].price)}`
+                  : billsBreakdown[0].price
               }
             />
           </Box>
@@ -237,15 +227,15 @@ export default function Checkout() {
                 </Typography>
                 <Typography variant="body1">
                   {activeStep >= 2
-                    ? `$${parseInt(billsBreakdown[0].price) * 1.13}`
-                    : `$${billsBreakdown[0].price}`}
+                    ? `$${addTax(billsBreakdown[0].price)}`
+                    : billsBreakdown[0].price}
                 </Typography>
               </div>
               <InfoMobile
                 totalPrice={
                   activeStep >= 2
-                    ? `$${parseInt(billsBreakdown[0].price) * 1.13}`
-                    : `$${billsBreakdown[0].price}`
+                    ? `$${addTax(billsBreakdown[0].price)}`
+                    : billsBreakdown[0].price
                 }
               />
             </CardContent>

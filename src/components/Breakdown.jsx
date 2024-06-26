@@ -5,29 +5,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
-
-const billsBreakdown = [
-  {
-    name: 'Total Amount',
-    desc: 'Due this month',
-    price: '$306.10',
-  },
-  {
-    name: 'Bill Amount',
-    desc: 'Monthly subscription',
-    price: '$150.00',
-  },
-  {
-    name: "Last month's balance",
-    desc: 'Late monthly subscription',
-    price: '$151.61',
-  },
-  {
-    name: 'Service Fee',
-    desc: 'Payment charges',
-    price: '$4.49',
-  },
-];
+import { billsBreakdown } from '../data/billsBreakdown';
 
 function Breakdown({ totalPrice }) {
   return (

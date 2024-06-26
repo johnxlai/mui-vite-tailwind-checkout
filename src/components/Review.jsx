@@ -7,6 +7,8 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import { billsBreakdown } from '../data/billsBreakdown';
+import { getTax, addTax } from '../utils/helpers';
 
 const addresses = ['1 MUI Drive', 'Reactville', 'Ontario', 'LH4 4H4', 'Canada'];
 const payments = [
@@ -21,17 +23,19 @@ export default function Review() {
     <Stack spacing={2}>
       <List disablePadding>
         <ListItem sx={{ py: 1, px: 0 }}>
-          <ListItemText primary="Total Amount" secondary="4 selected" />
-          <Typography variant="body2">$306.10</Typography>
+          <ListItemText primary="Total Amount" secondary="Due this month" />
+          <Typography variant="body2">{billsBreakdown[0].price}</Typography>
         </ListItem>
         <ListItem sx={{ py: 1, px: 0 }}>
           <ListItemText primary="Taxes" secondary="HST" />
-          <Typography variant="body2">$39.68</Typography>
+          <Typography variant="body2">
+            ${getTax(billsBreakdown[0].price)}
+          </Typography>
         </ListItem>
         <ListItem sx={{ py: 1, px: 0 }}>
           <ListItemText primary="Total" />
           <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>
-            $345.78
+            ${addTax(billsBreakdown[0].price)}
           </Typography>
         </ListItem>
       </List>
