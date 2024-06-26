@@ -24,16 +24,9 @@ import InfoMobile from './InfoMobile';
 import PaymentForm from './PaymentForm';
 import Review from './Review';
 import ToggleColorMode from './ToggleColorMode';
+import { billsBreakdown } from '../data/billsBreakdown';
 
 const steps = ['Billing address', 'Payment Method', 'Review & Confirm'];
-
-const billsBreakdown = [
-  {
-    name: 'Total Amount',
-    desc: 'Due this month',
-    price: '306.10',
-  },
-];
 
 const logoStyle = {
   width: '140px',
