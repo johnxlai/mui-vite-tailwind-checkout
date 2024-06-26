@@ -25,6 +25,7 @@ import PaymentForm from './PaymentForm';
 import Review from './Review';
 import ToggleColorMode from './ToggleColorMode';
 import { billsBreakdown } from '../data/billsBreakdown';
+import { addTax } from '../utils/helpers';
 
 const steps = ['Billing address', 'Payment Method', 'Review & Confirm'];
 
@@ -46,12 +47,6 @@ function getStepContent(step) {
     default:
       throw new Error('Unknown step');
   }
-}
-
-function addTax(price) {
-  //Remove the dollar sign and convert to number
-  price = price.replace('$', '');
-  return parseInt(price) * 1.13;
 }
 
 export default function Checkout() {
