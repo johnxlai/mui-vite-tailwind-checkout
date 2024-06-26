@@ -48,6 +48,12 @@ function getStepContent(step) {
   }
 }
 
+function addTax(price) {
+  //Remove the dollar sign and convert to number
+  price = price.replace('$', '');
+  return parseInt(price) * 1.13;
+}
+
 export default function Checkout() {
   const [mode, setMode] = React.useState('dark');
   const [showCustomTheme, setShowCustomTheme] = React.useState(true);
@@ -124,8 +130,8 @@ export default function Checkout() {
             <Info
               totalPrice={
                 activeStep >= 2
-                  ? `$${parseInt(billsBreakdown[0].price) * 1.13}`
-                  : `$${billsBreakdown[0].price}`
+                  ? `$${addTax(billsBreakdown[0].price)}`
+                  : billsBreakdown[0].price
               }
             />
           </Box>
@@ -226,15 +232,15 @@ export default function Checkout() {
                 </Typography>
                 <Typography variant="body1">
                   {activeStep >= 2
-                    ? `$${parseInt(billsBreakdown[0].price) * 1.13}`
-                    : `$${billsBreakdown[0].price}`}
+                    ? `$${addTax(billsBreakdown[0].price)}`
+                    : billsBreakdown[0].price}
                 </Typography>
               </div>
               <InfoMobile
                 totalPrice={
                   activeStep >= 2
-                    ? `$${parseInt(billsBreakdown[0].price) * 1.13}`
-                    : `$${billsBreakdown[0].price}`
+                    ? `$${addTax(billsBreakdown[0].price)}`
+                    : billsBreakdown[0].price
                 }
               />
             </CardContent>
